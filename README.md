@@ -1,17 +1,17 @@
-# TSRFinder
-TSRFinder identifies transcription pause regions (TSRs) from PRO-Cap data.
+# tsrFinder
+tsrFinder identifies transcription pause regions (TSRs) from PRO-Cap data.
 
 Author: Mrutyunjaya Parida, David Price Lab, UIOWA
 
 ## Usage:
-TSRFinder runs on Python v2.7+. The features of this program work the same way as the tsrFinderv2, instead it evaluates every TSR window across the genome for the sum of 3' reads (transcription pause sites) and the average read length. The TSRFinderI is an interface program that runs the actual TSRFinder program. It checks for errors in a user's input. If errors are found the TSRFinderI program displays the usage example and parameter description prior to exiting the run. 
+tsrFinder runs on Python v2.7+. The tsrFinderv2 evaluates every TSR window across the genome for the sum of 5' reads (transcription start sites) and the average read length. The tsrFinderI is an interface program that runs the actual tsrFinder program. It checks for errors in a user's input. If errors are found the tsrFinderI program displays the usage example and parameter description prior to exiting the run. 
 
-Both TSRFinder and TSRFinderI are intended to be run via a Python v2.7+ interpreter installed on your desired operating system of choice such as Windows, Mac or Linux. The TSRFinderI expects the following syntax on a linux command-line interface:
+Both tsrFinder and tsrFinderI are intended to be run via a Python v2.7+ interpreter installed on your desired operating system of choice such as Windows, Mac or Linux. The tsrFinderI expects the following syntax on a linux command-line interface:
 
 ```
-python TSRFinderI <mapped-fragments.bed file> <TSR window size> <TSR read depth> <minimum average read length> <maximum fragment size> <chromosome sizes file>
+python tsrFinderI <mapped-fragments.bed file> <TSR window size> <TSR read depth> <minimum average read length> <maximum fragment size> <chromosome sizes file>
 ```
-Download and put TSRFinderI and TSRFinder programs under one folder.
+Download and put tsrFinderI and tsrFinder programs under one folder.
 
 ### Parameter description:
 ```
@@ -33,7 +33,7 @@ minimum average read length: The desired minimum average read length (an integer
 
 maximum fragment size:     This parameter (an integer) allows exclusion of excessively long PRO-Seq reads. 
 
-chromosome sizes file:     TSRFinder requires a chromosome sizes file. This file can be obtained 
+chromosome sizes file:     tsrFinder requires a chromosome sizes file. This file can be obtained 
                            using [fetchChromSizes](http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/) 
                            utility.
 ```
