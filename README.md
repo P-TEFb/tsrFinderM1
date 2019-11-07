@@ -1,5 +1,5 @@
 # tsrfinderv2
-tsrFinder identifies transcription start regions (TSRs) from PRO-Cap data. The current tsrfinder is an updated version of the original tsrFinder written by Kyle Nilson.
+tsrFinder identifies transcription start regions (TSRs) from PRO-Cap or similar nascent transcript sequencing datasets. The current tsrFinder is an updated version of the original tsrFinder written by Kyle Nilson.
 
 Author: Mrutyunjaya Parida, David Price Lab, UIOWA
 
