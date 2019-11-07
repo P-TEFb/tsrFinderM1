@@ -18,4 +18,4 @@ f) chromosome size file path and name such as ###.chrom.sizes
 Note: tsrFinderv2 runs on Python 2.7+ version. Please refer to https://github.com/P-TEFb/tsrFinder for description on the program features and details.
 ```
 Example run of TSR finder: python TSR_F_V2 mapped-fragments.bed 20 20 30 600 ###.chrom.sizes
-```
+``'
