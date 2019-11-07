@@ -1,33 +1,42 @@
-# tsrfinderv2
-tsrFinder identifies transcription start regions (TSRs) from PRO-Cap or similar nascent transcript sequencing datasets. The current tsrFinder is an updated version of the original tsrFinder written by Kyle Nilson.
+# TSRFinder
+TSRFinder identifies transcription pause regions (TSRs) from PRO-Cap data.
 
 Author: Mrutyunjaya Parida, David Price Lab, UIOWA
 
-Please download and put TSR_F_V2 and TSR_F programs under one folder.
-```
-Please provide these details to run TSR finder properly:
-a) input file to run such as /home/<user>/<folder name>/mapped-fragments.bed.
-   Please provide the full path of the input file.
-   <user> refers to username and <folder name> is where the file is.
-b) TSR window size is an integer such as 20
-c) TSR read depth is an integer such as 20
-d) TSR average read length is an integer such as 30
-e) Fragment size is an integer such as 600
-f) chromosome size file path and name such as ###.chrom.sizes
-```
-Note: tsrFinderv2 runs on Python 2.7+ version. Please refer to https://github.com/P-TEFb/tsrFinder for description on the program features and details.
+## Usage:
+TSRFinder runs on Python v2.7+. The features of this program work the same way as the tsrFinderv2, instead it evaluates every TSR window across the genome for the sum of 3' reads (transcription pause sites) and the average read length. The TSRFinderI is an interface program that runs the actual TSRFinder program. It checks for errors in a user's input. If errors are found the TSRFinderI program displays the usage example and parameter description prior to exiting the run. 
 
-Key differences are as follows:
-
-The script accepts mapped sequencing reads in bed format and requires a chrom.sizes file (obtainable using the [fetchChromSizes](http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/) utility). TSR information is output in bed format only, for use with utilities such as [bedtools](http://bedtools.readthedocs.io/en/latest/).
-
-No parameters are hardcoded in this script.
-No options for number of threads and size of memory buffer per thread.
-
-The score field in the output bed file is not clipped at 1000.
-
-The final output is a comprehensive tab-delimited text file which contains information about both FW and RV strand TSR boundaries, sum of TSR read lengths, # of TSR reads, strand, the max TSS position, # of MaxTSS reads, the average TSS position, maxTSS-avgTSS, and the standard deviation of the average TSS position.
+Both TSRFinder and TSRFinderI are intended to be run via a Python v2.7+ interpreter installed on your desired operating system of choice such as Windows, Mac or Linux. The TSRFinderI expects the following syntax on a linux command-line interface:
 
 ```
-Example run of TSR finder: python TSR_F_V2 mapped-fragments.bed 20 20 30 600 ###.chrom.sizes
+python TSRFinderI <mapped-fragments.bed file> <TSR window size> <TSR read depth> <minimum average read length> <maximum fragment size> <chromosome sizes file>
 ```
+Download and put TSRFinderI and TSRFinder programs under one folder.
+
+### Parameter description:
+```
+mapped-fragments.bed file: A mapped fragment bed file can be generated from 
+                           alignment files in sam format using samtools and bedtools.
+
+TSR window size:           A desired size of the TSR window (an integer). We found TSRs are usually 
+                           40bp in width and are often clustered. This parameter can be 
+                           increased or decreased to find longer or shorter sized TSRs.
+
+TSR read depth:            The minimum amount of reads per TSR (an integer). This determination of 
+                           this parameter can vary depending on sequencing depth and the 
+                           amount of background signal in your dataset.
+
+minimum average read length: The desired minimum average read length (an integer) allows 
+                           elimination of TSRs formed exclusively by sequencing artifacts 
+                           and hard to map fragments. We observed TSRs tend to have an 
+                           avearage read length of atleast 30nt.
+
+maximum fragment size:     This parameter (an integer) allows exclusion of excessively long PRO-Seq reads. 
+
+chromosome sizes file:     TSRFinder requires a chromosome sizes file. This file can be obtained 
+                           using [fetchChromSizes](http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/) 
+                           utility.
+```
+
+### Output:
+The final output is a comprehensive tab-delimited text file which contains information about both FW and RV strand TSR boundaries, sum of TSR read lengths, # of TSR reads, strand, the MaxTSS position, # of MaxTSS reads, the average TSS position, MaxTSS-averageTSS, and the standard deviation of the average TSS position.
