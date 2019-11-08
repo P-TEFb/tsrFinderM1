@@ -10,6 +10,8 @@ Both tsrFinderv2 and tsrFinderv2I are intended to be run via a Python v2.7+ inte
 
 ```
 python tsrFinderv2I <mapped-fragments.bed file> <TSR window size> <TSR read depth> <minimum average read length> <maximum fragment size> <chromosome sizes file>
+
+Example run:               python tsrFinderv2I mapped-fragment.bed 20 20 30 600 hg38.chrom.sizes.txt
 ```
 Maintain the program files under the tsrFinderv2_dir folder. 
 
@@ -37,7 +39,6 @@ chromosome sizes file:     tsrFinderv2 requires a chromosome sizes file. This fi
                            using [fetchChromSizes](http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/) 
                            utility.
                            
-Example run:               python tsrFinderv2I mapped-fragment.bed 20 20 30 600 hg38.chrom.sizes.txt
 ```
 
 ### Output:
