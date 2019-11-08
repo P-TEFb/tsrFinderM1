@@ -13,8 +13,7 @@ If no use input errors are found the tsrFinderv2 program is run automatically.
 Both tsrFinderv2 and tsrFinderv2I are intended to be run via a Python v2.7+ interpreter installed on 
 your desired operating system of choice such as Windows, Mac or Linux. Additionally, tsrFinderv2I 
 requires the joblib python module installed prior to the tsrFinderv2 run. If the module is missing 
-tsrFinderv2I will guide you on installing the module. Finally, tsrFinderv2I expects the following syntax 
-on a linux command-line interface: 
+tsrFinderv2I will guide you on installing the module. 
 
 tsrFinderv2I syntax:
 
