@@ -12,7 +12,7 @@ tsrFinderv2 syntax:
 
 tsrFinderv2 <mapped-fragments.bed file> <TSR window size> <TSR read depth> <minimum average read length> <maximum fragment size> <chromosome sizes file>
 
-Download and put tsrFinderI and tsrFinder programs under one folder.
+Maintain the program files under the tsrFinderv2_dir folder.
 
 Parameter description:
 
