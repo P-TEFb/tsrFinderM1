@@ -14,6 +14,8 @@ tsrFinderv2 <mapped-fragments.bed file> <TSR window size> <TSR read depth> <mini
 
 Maintain the program files under the tsrFinderv2_dir folder.
 
+Example run:               python tsrFinderv2I mapped-fragment.bed 20 20 30 600 hg38.chrom.sizes.txt
+
 Parameter description:
 
 mapped-fragments.bed file: A mapped fragment bed file can be generated from alignment files in sam
