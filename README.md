@@ -11,7 +11,7 @@ Both tsrFinderv2 and tsrFinderv2I are intended to be run via a Python v2.7+ inte
 ```
 python tsrFinderv2I <mapped-fragments.bed file> <TSR window size> <TSR read depth> <minimum average read length> <maximum fragment size> <chromosome sizes file>
 ```
-Download and put tsrFinderI and tsrFinder programs under one folder.
+Download and put tsrFinderv2I and tsrFinderv2 programs under one folder.
 
 ### Parameter description:
 ```
