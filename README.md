@@ -36,6 +36,8 @@ maximum fragment size:     This parameter (an integer) allows exclusion of exces
 chromosome sizes file:     tsrFinderv2 requires a chromosome sizes file. This file can be obtained 
                            using [fetchChromSizes](http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/) 
                            utility.
+                           
+Example run:               python tsrFinderv2I mapped-fragment.bed 20 20 30 600 hg38.chrom.sizes.txt
 ```
 
 ### Output:
