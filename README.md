@@ -1,4 +1,4 @@
-# tsrFinderv2
+# tsrFinderM1
 tsrFinderM1 identifies transcription start regions (TSRs) from PRO-Cap and similar nascent transcript sequencing datasets.
 
 Author: Mrutyunjaya Parida, David Price Lab, UIOWA
@@ -12,7 +12,7 @@ Both tsrFinderM1 and tsrFinderM1I are intended to be run via a Python v2.7+ inte
 ```
 python tsrFinderM1I <mapped-fragments.bed file> <TSR window size> <TSR read depth> <minimum average read length> <maximum fragment size> <chromosome sizes file>
 
-Example run:               python tsrFinderM1I mapped-fragment.bed 20 20 30 600 hg38.chrom.sizes.txt
+Example run: python tsrFinderM1I mapped-fragment.bed 20 20 30 600 hg38.chrom.sizes.txt
 
 ```
 Maintain the program files under the tsrFinderM1_dir folder.
@@ -24,23 +24,23 @@ mapped-fragments.bed file: A mapped fragment bed file can be generated from alig
 
 TSR window size:           A desired size of the TSR window (an integer). We found TSRs are usually
                            20bp in width and are often clustered. This parameter can be increased or
-			                     decreased to find longer or shorter sized TSRs.
+			   decreased to find longer or shorter sized TSRs.
 
 TSR read depth:            The minimum amount of reads per TSR (an integer). This determination of
                            this parameter can vary depending on sequencing depth and the amount of
-			                     background signal in your dataset.
+			   background signal in your dataset.
 
 minimum average read length: The desired minimum average read length (an integer) allows elimination
                            of TSRs formed exclusively by sequencing artifacts and hard to map
-			                     fragments. We observed TSRs tend to have an avearage read length of
-			                     atleast 30nt.
+			   fragments. We observed TSRs tend to have an avearage read length of
+			   atleast 30nt.
 
 maximum fragment size:     This parameter (an integer) allows exclusion of excessively long PRO-Seq
                            reads. 
 
 chromosome sizes file:     tsrFinderM1I requires a chromosome sizes file. This file can be obtained
                            using [fetchChromSizes](http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/)
-			                     utility.
+			   utility.
 ```
 
 ### Output:
