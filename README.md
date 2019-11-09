@@ -44,4 +44,4 @@ chromosome sizes file:     tsrFinderM1I requires a chromosome sizes file. This f
 ```
 
 ### Output:
-The final output is a comprehensive tab-delimited text file which contains information about both FW and RV strand TSR boundaries, sum of TSR read lengths, # of TSR reads, strand, the MaxTSS position, # of MaxTSS reads, the average TSS position, MaxTSS-averageTSS, and the standard deviation of the average TSS position.
+The final output is a comprehensive tab-delimited text file which contains information about both FW and RV strand non-overlapping TSR boundaries, sum of TSR read lengths, # of TSR reads, strand, the MaxTSS position, # of MaxTSS reads, the average TSS position, MaxTSS-averageTSS, and the standard deviation of the average TSS position.
