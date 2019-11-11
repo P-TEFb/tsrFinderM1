@@ -5,7 +5,7 @@ Author: Mrutyunjaya Parida, David Price Lab, UIOWA
 
 ## Usage:
 tsrFinderM1 runs on Python v2.7+. The tsrFinderM1 evaluates every TSR window across the genome for the sum of 5' reads (transcription start sites) and the average read length. tsrFinderM1I is an interface program that runs the tsrFinderM1 program. It checks for errors in a user's input. If errors are found the tsrFinderM1I program displays the usage example and parameter description prior to exiting the run. 
-If no use input errors are found the tsrFinderM1 program is run automatically.
+If no use input errors are found tsrFinderM1I runs tsrFinderM1 program automatically.
 
 Both tsrFinderM1 and tsrFinderM1I are intended to be run via a Python v2.7+ interpreter installed on your desired operating system of choice such as Windows, Mac or Linux. Additionally, tsrFinderM1I requires the joblib python module installed prior to the tsrFinderM1 run. If the module is missing tsrFinderM1I will guide you on installing the module. Finally, tsrFinderv2I expects the following syntax on a linux command-line interface:
 
